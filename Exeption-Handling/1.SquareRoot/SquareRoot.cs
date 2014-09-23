@@ -1,6 +1,6 @@
 ﻿using System;
 
-class SquareRoot
+public class SquareRoot
 {
     static void Main()
     {
@@ -18,11 +18,11 @@ class SquareRoot
         }
         catch (FormatException)
         {
-            Console.WriteLine("Invalid nember");
+            Console.WriteLine("Invalid number");
         }
         catch
         {
-            Console.WriteLine("Invalid nember");
+            Console.WriteLine("Invalid number");
         }
         finally
         {
@@ -30,4 +30,3 @@ class SquareRoot
         }
     }
 }
-
