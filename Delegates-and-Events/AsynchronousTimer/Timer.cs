@@ -17,10 +17,10 @@ public class TestTimer
 
     static void Main()
     {
-        AsyncTimer timer1 = new AsyncTimer(Work1, 1000, 10000);
+        AsyncTimer timer1 = new AsyncTimer(Work1, 1000, 10);
         timer1.Start();
 
-        AsyncTimer timer2 = new AsyncTimer(Work2, 500, 20000);
+        AsyncTimer timer2 = new AsyncTimer(Work2, 500, 20);
         timer2.Start();
     }
 }

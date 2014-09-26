@@ -24,10 +24,10 @@ public class AsyncTimer
 
             if (actionMethod != null)
             {
-                actionMethod((this.ticks/1000) + "");
+                actionMethod(this.ticks + "");
             }
 
-            this.ticks -= 1000;
+            this.ticks--;
         }
     }
 
