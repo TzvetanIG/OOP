@@ -1,7 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using System.Xml;
-
-public enum Genter
+﻿public enum Genter
 {
     Femail,
     Male
@@ -11,8 +8,7 @@ public abstract class Animal : ISound
 {
     private string name;
     private int age;
-
-
+    
     protected Animal(string name, int age, Genter genter)
     {
         this.Genter = genter;
@@ -24,23 +20,23 @@ public abstract class Animal : ISound
 
     public int Age
     {
-        get { return age; }
+        get { return this.age; }
 
         private set
         {
             Validation.CheckForNegativeOrZero(value, "age");
-            age = value;
+            this.age = value;
         }
     }
 
     public string Name
     {
-        get { return name; }
+        get { return this.name; }
 
         private set
         {
             Validation.CheckForNullOrEmpty(value, "name");
-            name = value;
+            this.name = value;
         }
     }
 

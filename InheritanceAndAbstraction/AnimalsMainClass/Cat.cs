@@ -7,7 +7,6 @@ public class Cat : Animal
     {
     }
 
-
     public override void ProduceSound()
     {
         Console.WriteLine("I meow.");

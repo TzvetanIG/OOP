@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School", "School\School.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanStudentWorker", "HumanStudentWorker\HumanStudentWorker.csproj", "{DE01F722-F1ED-4020-AA17-A523255D8F39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalsMainClass", "AnimalsMainClass\AnimalsMainClass.csproj", "{3DC23870-8135-42DA-9345-1C83BDFE0416}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animals", "AnimalsMainClass\Animals.csproj", "{3DC23870-8135-42DA-9345-1C83BDFE0416}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyHierarchy", "CompanyHierarchy\CompanyHierarchy.csproj", "{AC1D4851-CF52-4AEC-B4C4-DE216EEACBC2}"
 EndProject

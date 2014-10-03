@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Globalization;
+using System.Collections.Generic;
 using System.Linq;
 
 class AnimalsMainClass
@@ -12,14 +12,36 @@ class AnimalsMainClass
             new Cat("Pisana", 1, Genter.Femail), 
             new Frog("Jabcho", 1, Genter.Male), 
             new Kitten("Kity", 5), 
-            new Tomcat("Tom", 3)
+            new Tomcat("Tom", 4)
         };
 
         animals.ToList().ForEach(Console.WriteLine);
 
         Console.WriteLine();
 
-        Console.WriteLine("The average age of animals is {0}.", animals.Average(a => a.Age));
+        var animalsBygroups = animals.GroupBy(GetAnimalKind,
+            (g, a) => new { kind = g, averagAge = a.Average(animal => animal.Age) });
+
+        foreach (var animalGroup in animalsBygroups)
+        {
+            Console.WriteLine("The average age of {0}s is {1:f2}.", animalGroup.kind, animalGroup.averagAge);
+        }
+
+    }
+
+    public static string GetAnimalKind(Animal animal)
+    {
+        string kind = "";
+        if (animal is Cat)
+        {
+            kind = "Cat";
+        }
+        else
+        {
+            kind = animal.GetType().Name;
+        }
+
+        return kind;
     }
 }
 
