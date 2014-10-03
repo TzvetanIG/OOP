@@ -32,13 +32,13 @@ class AnimalsMainClass
     public static string GetAnimalKind(Animal animal)
     {
         string kind = "";
-        if (animal is Cat)
+        if (animal.GetType().BaseType.Name == "Animal")
         {
-            kind = "Cat";
+            kind = animal.GetType().Name;
         }
         else
         {
-            kind = animal.GetType().Name;
+            kind = animal.GetType().BaseType.Name;
         }
 
         return kind;
