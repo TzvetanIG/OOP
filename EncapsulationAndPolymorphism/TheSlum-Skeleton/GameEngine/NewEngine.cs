@@ -7,6 +7,7 @@ namespace TheSlum.GameEngine
 {
     class NewEngine : Engine
     {
+
         protected override void CreateCharacter(string[] inputParams)
         {
             Character character;
@@ -31,10 +32,10 @@ namespace TheSlum.GameEngine
                         x: int.Parse(inputParams[3]), 
                         y: int.Parse(inputParams[4]), 
                         healthPoints: 100,
-                        defensePoints: 100, 
+                        defensePoints: 30, 
                         team: team,
-                        range: 20, 
-                        attackPoints: 100);
+                        range: 10, 
+                        attackPoints: 60);
                     break;
                 case "healer":
                     character = new Healer(
@@ -44,7 +45,7 @@ namespace TheSlum.GameEngine
                         healthPoints: 100, 
                         defensePoints: 0, 
                         team: team, 
-                        range: 20, 
+                        range: 10, 
                         healingPoints: 30);
                     break;
                 case "mage":
@@ -53,10 +54,10 @@ namespace TheSlum.GameEngine
                         x: int.Parse(inputParams[3]),
                         y: int.Parse(inputParams[4]),
                         healthPoints: 100,
-                        defensePoints: 50,
+                        defensePoints: 5,
                         team: team,
-                        range: 20,
-                        attackPoints: 80);
+                        range: 10,
+                        attackPoints: 30);
                     break;
                 default:
                     throw new ApplicationException("No such kind of hero.");

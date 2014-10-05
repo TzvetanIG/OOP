@@ -26,7 +26,7 @@
 
         public override Character GetTarget(IEnumerable<Character> targetsList)
         {
-            return targetsList.First(c => c.IsAlive);
+            return targetsList.FirstOrDefault(c => (c.IsAlive && this.Team != c.Team));
         }
     }
 }

@@ -16,7 +16,7 @@
 
         public override Character GetTarget(IEnumerable<Character> targetsList)
         {
-            return targetsList.Last(c => c.IsAlive);
+            return targetsList.LastOrDefault(c => (c.IsAlive && this.Team != c.Team));
         }
 
         public override void AddToInventory(Item item)
