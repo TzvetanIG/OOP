@@ -34,6 +34,16 @@ namespace Customer
             Console.WriteLine(pesho.CompareTo(gosho));
             Console.WriteLine(pesho2.CompareTo(pesho));
             Console.WriteLine(pesho.CompareTo(petarCloning));
+
+            Console.WriteLine("=------------------------------------------");
+
+            Customer cloning = (Customer)pesho.Clone();
+
+            pesho.Payments[0].Price = 200;
+            cloning.Payments[0].Price = 100000;
+
+            Console.WriteLine("Pesho cloninig:\n{0}", cloning.Payments[0].Price);
+            Console.WriteLine("Pesho:\n{0}", pesho.Payments[0].Price);
         }
     }
 }

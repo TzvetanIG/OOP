@@ -53,7 +53,7 @@ namespace Customer
                 this.CustomerType = CustomerType.Diamond;
             }
         }
-
+        
         protected bool Equals(Customer other)
         {
             return string.Equals(FirstName, other.FirstName) && string.Equals(MidleName, other.MidleName) && string.Equals(LastName, other.LastName) && Id == other.Id;
@@ -78,7 +78,7 @@ namespace Customer
         {
             unchecked
             {
-                return this.Id;
+                return this.Id.GetHashCode();
             }
         }
 
@@ -97,7 +97,11 @@ namespace Customer
             var cloning = new Customer(this.FirstName, this.MidleName, this.LastName,
             this.Id, this.PermanentAddress, this.Email, this.MobilePhone);
 
-            cloning.Payments = new List<Payment>(this.Payments);
+            cloning.Payments = new List<Payment>();
+            foreach (var payment in this.Payments)
+            {
+                cloning.Payments.Add(new Payment(payment.ProductName, payment.Price));
+            }
             cloning.CustomerType = this.CustomerType;
 
             return cloning;
