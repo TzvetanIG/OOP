@@ -35,6 +35,11 @@ namespace StringDisperser
 
                 Console.WriteLine();
             }
+
+            var cloning = (StringDisperser)stringDispersers[0].Clone();
+            cloning.strings[0] = "ffffffffffffff";
+            Console.WriteLine(stringDispersers[0].ToString());
+            
         }
     }
 }

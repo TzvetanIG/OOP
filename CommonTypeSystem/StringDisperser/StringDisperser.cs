@@ -5,7 +5,7 @@ namespace StringDisperser
 {
     class StringDisperser : ICloneable, IComparable, IEnumerable
     {
-        private string[] strings;
+        public string[] strings;
 
         public StringDisperser(params string[] strings)
         {
@@ -45,7 +45,7 @@ namespace StringDisperser
 
         public object Clone()
         {
-            var cloning = new StringDisperser(this.strings);
+            var cloning = new StringDisperser((string[])this.strings.Clone());
             return cloning;
         }
 
