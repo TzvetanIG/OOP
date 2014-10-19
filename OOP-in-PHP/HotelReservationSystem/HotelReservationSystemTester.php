@@ -4,9 +4,9 @@ function __autoload($className)
     include_once("./" . $className . ".class.php");
 }
 
-$firstQuest = new Quest("Georgi", "Dimitrov", 12548789);
-$secondQuest = new Quest("Todor", "Jivkov", 2165418);
-$thirdQuest = new Quest("Georgi", "Parvanov", 89466466);
+$firstQuest = new Guest("Georgi", "Dimitrov", 12548789);
+$secondQuest = new Guest("Todor", "Jivkov", 2165418);
+$thirdQuest = new Guest("Georgi", "Parvanov", 89466466);
 
 
 $firstReservation = new Reservation("19-10-2014", "21-10-2014", $firstQuest);
@@ -98,7 +98,7 @@ function isApartment($room){
 }
 
 function isEmpty(Room $room){
-    $quest = new Quest("G", "R", 89466466);
+    $quest = new Guest("G", "R", 89466466);
     $reservation = new Reservation("19-10-2014", "21-10-2014", $quest);
     try{
         $room->checkForValidReservation($reservation);

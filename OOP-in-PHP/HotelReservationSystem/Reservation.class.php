@@ -9,9 +9,9 @@ class Reservation
     /**
      * @param string $startDate  Data in format "d-m-y".
      * @param string $endDate Data in format "d-m-y".
-     * @param Quest $guest
+     * @param Guest $guest
      */
-    function __construct($startDate, $endDate, Quest $guest)
+    function __construct($startDate, $endDate, Guest $guest)
     {
         $this->startDate = new DateTime($startDate);
         $this->endDate =  new DateTime($endDate);
@@ -19,7 +19,7 @@ class Reservation
     }
 
     /**
-     * @param \Quest $guest
+     * @param \Guest $guest
      */
     public function setGuest($guest)
     {
@@ -27,7 +27,7 @@ class Reservation
     }
 
     /**
-     * @return \Quest
+     * @return \Guest
      */
     public function getGuest()
     {

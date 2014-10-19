@@ -1,9 +1,12 @@
 <?php
+require_once "Room.class.php";
 
 class Apartment extends Room {
+    const BED_COUNT = 4;
+
     function __construct($roomNumber, $price)
     {
-        parent::__construct($roomNumber, 4, $price, true, true, RoomType::DIAMOND);
+        parent::__construct($roomNumber, Apartment::BED_COUNT, $price, true, true, RoomType::DIAMOND);
         $this->addExtras(Extra::TV);
         $this->addExtras(Extra::AIR_CONDITIONER);
         $this->addExtras(Extra::REFRIGERATOR);
